@@ -1,7 +1,6 @@
 FROM redhat/ubi9:latest
 
-# 安装开发工具（包含 GCC）
-RUN dnf install -y \
+RUN dnf install -y --allowerasing \
     git \
     curl \
     wget \
