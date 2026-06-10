@@ -1,0 +1,15 @@
+{
+    "name": "RHEL 9 Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+        "ms-python.python",
+        "redhat.vscode-yaml"
+    ],
+    "remoteUser": "vscode",
+    "postCreateCommand": "echo 'RHEL environment ready!'"
+}
