@@ -158,6 +158,13 @@ cc_test(
     deps = ["//:gtest_main"],
 )
 
+cc_test(
+    name = "spsc_queue_test",
+    size = "small",
+    srcs = ["spsc_test.cc"],
+    deps = ["//:gtest_main"],
+)
+
 #  Py tests
 
 py_library(
