@@ -19,6 +19,7 @@ include(GNUInstallDirs)
 option(BUILD_GMOCK "Builds the googlemock subproject" ON)
 option(INSTALL_GTEST "Enable installation of googletest. (Projects embedding googletest may want to turn this OFF.)" ON)
 option(GTEST_HAS_ABSL "Use Abseil and RE2. Requires Abseil and RE2 to be separately added to the build." OFF)
+option(BUILD_EXAMPLES "Build example programs demonstrating googletest usage" OFF)
 
 if(GTEST_HAS_ABSL)
   if(NOT TARGET absl::base)
@@ -33,4 +34,9 @@ if(BUILD_GMOCK)
   add_subdirectory( googlemock )
 else()
   add_subdirectory( googletest )
+endif()
+
+# Build examples if requested
+if(BUILD_EXAMPLES)
+  add_subdirectory(examples)
 endif()
