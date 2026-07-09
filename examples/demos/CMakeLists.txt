@@ -2,3 +2,4 @@
 
 add_subdirectory(spsc-producer-consumer)
 add_subdirectory(spsc-benchmark)
+add_subdirectory(spdlog-demo)
